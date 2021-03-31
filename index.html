@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <header>
+      <a href="#" class="logo">Marvel</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="#" style="--i:1;" class="nav-item">Home</a></li>
+        <li><a href="#" style="--i:2;" class="nav-item">Characters</a></li>
+        <li><a href="#" style="--i:3;" class="nav-item">Movies</a></li>
+        <li><a href="#" style="--i:4;" class="nav-item">Games</a></li>
+        <li><a href="#" style="--i:4;" class="nav-item">More</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <div class="box" style="--i:2;">
+        <div class="img-box">
+          <img src="./1.jpg" alt="">
+        </div>
+      </div>
+      <div class="box"  style="--i:3;">
+        <div class="img-box">
+          <img src="./2.jpg" alt="">
+        </div>
+      </div>
+      <div class="box" style="--i:4;">
+        <div class="img-box">
+          <img src="./3.jpg" alt="">
+        </div>
+      </div>
+      <div class="box" style="--i:5;">
+        <div class="img-box">
+          <img src="./4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="sci">
+        <li><a href="#"  style="--i:5;">Facebook</a></li>
+        <li><a href="#" style="--i:6;">Twitter</a></li>
+        <li><a href="#" style="--i:7;">Instagram</a></li>
+        <li><a href="#" style="--i:8;">Youtube</a></li>
+      </ul>
+      <p class="copyright">
+        Powered by Duy 2021
+      </p>
+    </div>
+  </section>
+
+  <script>
+    let imgBox = document.querySelectorAll('.img-box');
+    imgBox.forEach(popup => popup.addEventListener('click',()=>{
+      popup.classList.toggle('active');
+    }))
+
+    let navItem = document.querySelectorAll('.nav-item');
+    navItem.forEach(popup => popup.addEventListener('click',()=>{
+      toggleMenu();
+      
+    }))
+    function toggleMenu(){
+      const menuToggle = document.querySelector('.toggle');
+      const nav = document.querySelector('.nav');
+
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
